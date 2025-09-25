@@ -1,248 +1,149 @@
-# 🏦 DSA Capstone Project: Personal Finance Management System
+## 🧑‍🎓 Student Guide: Personal Finance DSA Project (Make All Tests Pass)
 
-## 📖 Project Overview
+This repository contains a scaffolded Java/Maven project with unit tests already written for you. Your job is to implement the data structures and algorithms so that all tests pass.
 
-You are tasked with building a comprehensive **Personal Finance Management System** that integrates **ALL** concepts learned in your 6-week Data Structures and Algorithms course. This is not just a collection of separate programs—it's a single, cohesive application that demonstrates mastery of every topic covered.
+Focus: setup quickly, run tests often, implement incrementally.
 
-## 🎯 Learning Objectives
+### ✅ What You’ll Build
 
-By completing this capstone project, you will demonstrate proficiency in:
-- Java fundamentals and object-oriented programming
-- Array operations and sorting algorithms
-- Search algorithms and optimization
-- Hash tables and collision handling
-- Linked list implementations and operations
-- Stack and queue data structures
-- Recursion and recursive problem solving
-- String manipulation and validation
-- Algorithm analysis and complexity understanding
+A console-based Personal Finance system that demonstrates:
+- Linked lists (transactions), stacks (undo), queues (pending processing)
+- Sorting and searching (arrays, quick/merge sort, binary search)
+- Hash-based budget management
+- Recursion and string utilities
 
-## 🛠️ Project Requirements
+The implementation lives in `src/main/java/...`. Tests that verify your work are in `src/test/java/...`.
 
-### Core System Architecture
+### 🧰 Prerequisites
 
-Your system must implement the following components:
+- Java 17+ (JDK)
+- Maven 3.8+
+- An IDE (IntelliJ IDEA recommended)
 
-#### 1. **Transaction Management (Week 4 - Linked Lists)**
-- Create a `Transaction` class with fields:
-  - Unique ID, description, amount, category, date, income/expense flag
-- Implement a **doubly linked list** to store transaction history
-- Support operations: add, delete, search, reverse order
-- Maintain size counter and proper pointer management
+Verify your setup:
+```bash
+java -version
+mvn -version
+```
 
-#### 2. **Data Processing (Week 2-3 - Arrays & Sorting)**
-- Convert linked list to arrays for sorting operations
-- Implement **at least 2 different sorting algorithms**:
-  - Quick Sort (sort by amount)
-  - Merge Sort (sort by date)
-  - Insertion/Selection Sort (your choice for a third criterion)
-- Implement **Binary Search** for efficient transaction lookup by ID
-- Handle edge cases: empty arrays, single elements, duplicate values
+### 🚀 Getting Started
 
-#### 3. **Category and Budget Management (Week 4 - Hashing)**
-- Use **HashMap** to store budget limits per category
-- Use **HashMap** to track current spending per category
-- Use **HashSet** to maintain valid category list
-- Implement collision handling and demonstrate hash table efficiency
-- Detect and prevent duplicate entries
+1) Clone and open the project
+```bash
+git clone <your-fork-or-starter-url>
+cd wagmi-ds01-assignment-01
+```
 
-#### 4. **Operation History (Week 5 - Stacks)**
-- Implement a **Stack** to track user operations for undo functionality
-- Support operations: push, pop, peek, isEmpty
-- Store operation strings (e.g., "ADD:123", "DELETE:456")
-- Handle stack overflow and underflow gracefully
+2) First build (runs all tests)
+```bash
+mvn -q -DskipTests=false clean test
+```
+Expect failures at the beginning. Your goal is to turn the build green by implementing code in `src/main/java`.
 
-#### 5. **Transaction Processing (Week 5 - Queues)**
-- Implement a **Queue** for pending transaction processing
-- Use circular array implementation
-- Support batch processing of queued transactions
-- Handle queue full/empty states
+### 🧪 Running Tests
 
-#### 6. **Advanced Analysis (Week 6 - Recursion)**
-Implement **at least 3 recursive functions**:
-- **Recursive validation**: Validate date formats (YYYY-MM-DD)
-- **Recursive calculation**: Calculate category totals from linked list
-- **Recursive analysis**: Generate budget reports with category breakdown
-- **Bonus**: Palindrome detection in transaction descriptions
+- Run everything:
+```bash
+mvn test
+```
 
-#### 7. **String Processing (Week 6 - Strings)**
-- Input validation and sanitization
-- Pattern matching for date formats
-- String parsing for transaction data
-- Format output strings for reports
+- Run a single test class (example: sorting):
+```bash
+mvn -Dtest=com.wagmi.finance.alg.SortersTest test
+```
 
-#### 8. **User Interface (Week 1 - Java Basics)**
-- Menu-driven console application
-- Input validation with proper error handling
-- Loops for continuous operation
-- Conditional logic for different user choices
-- Exception handling for all user inputs
+- Run a single test method:
+```bash
+mvn -Dtest=com.wagmi.finance.alg.SortersTest#shouldSortByAmountAscending test
+```
 
-## 🏗️ Required Features
+- Show surefire reports (after tests): see `target/surefire-reports/`.
 
-### Must-Have Functionality:
+IntelliJ users:
+- Right-click any test class or method in `src/test/java` and select “Run”.
 
-1. **Add Transaction**
-   - Validate all inputs (amount > 0, valid category, proper date format)
-   - Use recursion for date validation
-   - Add to pending queue, then process to main list
+### 📁 Project Map (Where to Code)
 
-2. **View Transactions**
-   - Display all transactions from linked list
-   - Show total count and basic statistics
+- `src/main/java/com/wagmi/finance/alg/Sorters.java`: implement sorting algorithms.
+- `src/main/java/com/wagmi/finance/alg/Search.java`: implement binary search and helpers.
+- `src/main/java/com/wagmi/finance/ds/DoublyLinkedTransactions.java`: implement a doubly linked list.
+- `src/main/java/com/wagmi/finance/history/OperationStack.java`: implement an array-based stack.
+- `src/main/java/com/wagmi/finance/processing/PendingQueue.java`: implement a circular-array queue.
+- `src/main/java/com/wagmi/finance/recursion/RecursionUtils.java`: implement required recursive functions.
+- `src/main/java/com/wagmi/finance/strings/StringUtils.java`: implement string utilities and validation.
+- `src/main/java/com/wagmi/finance/budget/BudgetManager.java`: implement category budgets with hash-based structures.
+- `src/main/java/com/wagmi/finance/app/FinanceApp.java`: simple console runner (keep minimal; tests focus on logic).
 
-3. **Delete Transaction**
-   - Remove by ID from linked list
-   - Update category spending accordingly
-   - Add operation to undo stack
+Tests to watch:
+- `src/test/java/com/wagmi/finance/**`: each package has targeted tests + an integration test.
 
-4. **Search Transaction**
-   - Sort array by ID first, then use binary search
-   - Display search results with performance metrics
+### 🧭 Your Goal (Pass All Tests)
 
-5. **Sort Transactions**
-   - Offer multiple sorting criteria (amount, date, category)
-   - Use different algorithms for different criteria
-   - Display sorted results
+Implement methods in `src/main/java/**` so that all tests under `src/test/java/**` pass. Start with the simplest structures first and run tests after every small change.
 
-6. **Budget Management**
-   - Set budget limits per category
-   - Track spending against budgets
-   - Warn when approaching/exceeding limits
+Suggested order:
+1. `DoublyLinkedTransactions`
+2. `OperationStack` and `PendingQueue`
+3. `Sorters` and `Search`
+4. `StringUtils` and `RecursionUtils`
+5. `BudgetManager`
+6. `FinanceApp` (light, if needed by tests)
 
-7. **Generate Reports**
-   - Use recursion to calculate category totals
-   - Show income vs. expenses
-   - Budget analysis with percentages
-   - Top spending categories
+### 🧱 Rules and Expectations
 
-8. **Undo Operations**
-   - Use stack to reverse last operations
-   - Support multiple levels of undo
+- Use only Java Standard Library (no external DS/Algo libs).
+- Implement algorithms yourself where required (e.g., quick sort, merge sort, binary search).
+- Write clean, readable code with clear names. Handle edge cases and invalid inputs.
 
-9. **Process Pending Transactions**
-   - Process all transactions in queue
-   - Update spending totals
-   - Check budget violations
+### 🧭 Common Maven Commands
 
-## 🧪 Technical Specifications
+```bash
+# clean build and run all tests
+mvn clean test
 
-### Data Structure Requirements:
-- **Doubly Linked List**: Manual implementation (no ArrayList)
-- **Stack**: Array-based implementation with fixed capacity
-- **Queue**: Circular array implementation
-- **HashMap**: Use Java's built-in for budget/category management
-- **HashSet**: Use Java's built-in for category validation
+# run tests without re-compiling unchanged classes
+mvn -DskipTests=false test
 
-### Algorithm Requirements:
-- **Sorting**: Implement Quick Sort and Merge Sort from scratch
-- **Searching**: Implement Binary Search from scratch
-- **Recursion**: Minimum 3 recursive functions with different purposes
+# quickly re-run a specific test class
+mvn -Dtest=com.wagmi.finance.recursion.RecursionUtilsTest test
+```
 
-### Code Quality Requirements:
-- Proper error handling for all user inputs
-- Clear variable naming and code organization
-- Comments explaining complex algorithms
-- Modular design with separate methods for each feature
+### 🧩 Troubleshooting
 
-## 📊 Complexity Analysis
+- Java/Maven not found: ensure JDK and Maven are installed and on PATH.
+- Failing tests: read the assertion message and open the referenced class; implement just enough to make that test pass.
+- Stuck on algorithms: start with the simpler version, then optimize.
+- CI-like check locally: run `mvn -q clean test` to emulate a quiet build.
 
-For each major operation, document:
-- **Time Complexity**: Best, average, and worst case
-- **Space Complexity**: Additional memory usage
-- **Trade-offs**: Why you chose specific algorithms
+### 📈 Grading (How You’re Evaluated)
 
-Example operations to analyze:
-- Adding a transaction: O(?)
-- Sorting by amount: O(?)
-- Binary search: O(?)
-- Recursive category calculation: O(?)
+- Functionality: the tests pass (unit + integration)
+- Algorithm/Data Structure correctness and efficiency
+- Code quality and organization
+- Edge case handling
 
-## 🎮 Testing Requirements
+### 📝 Tips for Success
 
-### Test Cases You Must Handle:
-1. **Empty System**: All operations on empty data structures
-2. **Single Element**: Operations with only one transaction
-3. **Large Dataset**: Performance with 100+ transactions
-4. **Invalid Inputs**: Negative amounts, invalid dates, wrong categories
-5. **Edge Cases**: Maximum capacity, duplicate IDs, null values
-6. **Algorithm Verification**: Verify sorting produces correct order
+- Run tests constantly; commit frequently.
+- Implement minimum code to pass one test at a time (TDD mindset).
+- Prefer small, well-named methods over long ones.
+- Use the `target/surefire-reports/*.txt` files for detailed failures.
 
-### Suggested Test Data:
-Create transactions with:
-- Different amounts (including very small and large values)
-- Various categories and dates
-- Both income and expense transactions
-- Duplicate descriptions and amounts
-- Edge case dates (year boundaries, invalid formats)
+### 🧪 Provided Test Suite (High-Level)
 
-## 🏆 Advanced Challenges (Bonus Points)
+- `alg`: `SearchTest`, `SortersTest`
+- `ds`: `DoublyLinkedTransactionsTest`
+- `history`: `OperationStackTest`
+- `processing`: `PendingQueueTest`
+- `recursion`: `RecursionUtilsTest`
+- `strings`: `StringUtilsTest`
+- `budget`: `BudgetManagerTest`
+- `app`: `FinanceAppSmokeTest`
+- `integration`: `FinanceSystemIntegrationTest`
 
-If you want to push your skills further:
-
-1. **Performance Optimization**
-   - Implement custom hash function
-   - Add caching for frequently accessed data
-   - Optimize recursive functions to avoid stack overflow
-
-2. **Additional Features**
-   - Transaction categories with subcategories (tree structure)
-   - Monthly/yearly report generation
-   - Import/export functionality with file I/O
-   - Search by multiple criteria
-
-3. **Algorithm Variations**
-   - Implement Heap Sort for another sorting option
-   - Add interpolation search for uniformly distributed data
-   - Implement recursive Quick Sort vs iterative version
-
-## 📋 Deliverables
-
-Submit the following:
-
-1. **Source Code**: Complete Java implementation
-2. **README**: Setup and usage instructions
-3. **Test Report**: Document your test cases and results
-4. **Complexity Analysis**: Big-O analysis for all major operations
-5. **Demo Data**: Sample transactions for testing
-6. **Reflection**: 1-page reflection on challenges faced and lessons learned
-
-## 🕒 Timeline Suggestions
-
-- **Week 1**: Plan architecture, implement basic classes
-- **Week 2**: Implement linked list and basic operations
-- **Week 3**: Add sorting and searching algorithms
-- **Week 4**: Implement stack/queue and hash table features
-- **Week 5**: Add recursive functions and advanced features
-- **Week 6**: Testing, optimization, and documentation
-
-## 📈 Grading Criteria
-
-- **Functionality** (40%): All required features work correctly
-- **Algorithm Implementation** (25%): Proper implementation of data structures and algorithms
-- **Code Quality** (20%): Clean, readable, well-organized code
-- **Testing** (10%): Comprehensive test cases and edge case handling
-- **Documentation** (5%): Clear comments and complexity analysis
-
-## 🚨 Important Notes
-
-- **No external libraries** except Java standard library
-- **Manual implementation** required for core data structures
-- **Original work only** - this tests YOUR understanding
-- **Handle all edge cases** - robust error handling expected
-- **Document your complexity analysis** - show your algorithmic thinking
-
-## 💡 Success Tips
-
-1. **Start with the data structures** - they're the foundation
-2. **Test incrementally** - don't build everything before testing
-3. **Handle edge cases early** - they're often forgotten until the end
-4. **Use meaningful variable names** - your code should be self-documenting
-5. **Draw diagrams** - visualize your linked lists and tree structures
-6. **Time your algorithms** - see the performance differences in practice
+When all of these are green, you’re done.
 
 ---
 
-**Remember**: This capstone project is designed to be challenging. It integrates everything you've learned into one comprehensive system. Take your time, plan carefully, and don't hesitate to revisit earlier concepts when needed. The goal is to demonstrate mastery of DSA concepts in a practical, real-world application.
+You’ve got this—ship small, test often, and make the build green. ✅
 
-**Good luck, and happy coding! 🚀**

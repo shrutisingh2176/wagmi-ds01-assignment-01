@@ -1,0 +1,92 @@
+-------------------------------------------------------------------------------
+Test set: test.java.com.wagmi.finance.alg.SearchTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 1, Errors: 9, Skipped: 0, Time elapsed: 0.005 s <<< FAILURE! -- in test.java.com.wagmi.finance.alg.SearchTest
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_handles_two_elements -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_handles_two_elements(SearchTest.java:42)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_searches_last_element -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_searches_last_element(SearchTest.java:85)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_handles_large_array -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_handles_large_array(SearchTest.java:53)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_searches_middle_element -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_searches_middle_element(SearchTest.java:73)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_handles_single_element -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_handles_single_element(SearchTest.java:35)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_with_null_array_throws_exception -- Time elapsed: 0.001 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Unexpected exception type thrown, expected: <java.lang.NullPointerException> but was: <java.lang.UnsupportedOperationException>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3115)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_with_null_array_throws_exception(SearchTest.java:67)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.lambda$binarySearchById_with_null_array_throws_exception$0(SearchTest.java:67)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:53)
+	... 6 more
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_searches_first_element -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_searches_first_element(SearchTest.java:79)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_handles_empty_array -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_handles_empty_array(SearchTest.java:29)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_with_null_id_returns_negative_one -- Time elapsed: 0.001 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_with_null_id_returns_negative_one(SearchTest.java:62)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_finds_index_or_returns_negative_one -- Time elapsed: 0 s <<< ERROR!
+java.lang.UnsupportedOperationException: Not implemented
+	at main.java.com.wagmi.finance.alg.Search.binarySearchById(Search.java:11)
+	at test.java.com.wagmi.finance.alg.SearchTest.binarySearchById_finds_index_or_returns_negative_one(SearchTest.java:21)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.005" tests="10" errors="8" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.005" tests="10" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="25"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="IN"/>
     <property name="sun.boot.library.path" value="/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/thisisamank/IdeaProjects/wagmi-ds01-assignment-01/target/surefire/surefirebooter-20250925224420083_3.jar /Users/thisisamank/IdeaProjects/wagmi-ds01-assignment-01/target/surefire 2025-09-25T22-44-20_047-jvmRun1 surefire-20250925224420083_1tmp surefire_0-20250925224420083_2tmp"/>
+    <property name="sun.java.command" value="/Users/thisisamank/IdeaProjects/wagmi-ds01-assignment-01/target/surefire/surefirebooter-20250926153404811_3.jar /Users/thisisamank/IdeaProjects/wagmi-ds01-assignment-01/target/surefire 2025-09-26T15-34-04_778-jvmRun1 surefire-20250926153404811_1tmp surefire_0-20250926153404811_2tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/thisisamank/IdeaProjects/wagmi-ds01-assignment-01/target/test-classes:/Users/thisisamank/IdeaProjects/wagmi-ds01-assignment-01/target/classes:/Users/thisisamank/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.2/junit-jupiter-5.10.2.jar:/Users/thisisamank/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.2/junit-jupiter-api-5.10.2.jar:/Users/thisisamank/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/Users/thisisamank/.m2/repository/org/junit/platform/junit-platform-commons/1.10.2/junit-platform-commons-1.10.2.jar:/Users/thisisamank/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/Users/thisisamank/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.2/junit-jupiter-params-5.10.2.jar:/Users/thisisamank/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.2/junit-jupiter-engine-5.10.2.jar:/Users/thisisamank/.m2/repository/org/junit/platform/junit-platform-engine/1.10.2/junit-platform-engine-1.10.2.jar:"/>
@@ -20,6 +20,7 @@
     <property name="user.home" value="/Users/thisisamank"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="surefire.useFile" value="true"/>
     <property name="java.version.date" value="2025-09-16"/>
     <property name="java.home" value="/opt/homebrew/Cellar/openjdk/25/libexec/openjdk.jdk/Contents/Home"/>
     <property name="file.separator" value="/"/>
@@ -29,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="apple.awt.application.name" value="ForkedBooter"/>
-    <property name="surefire.real.class.path" value="/Users/thisisamank/IdeaProjects/wagmi-ds01-assignment-01/target/surefire/surefirebooter-20250925224420083_3.jar"/>
+    <property name="surefire.real.class.path" value="/Users/thisisamank/IdeaProjects/wagmi-ds01-assignment-01/target/surefire/surefirebooter-20250926153404811_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="25"/>
@@ -49,6 +50,7 @@
     <property name="os.arch" value="aarch64"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="native.encoding" value="UTF-8"/>
+    <property name="trimStackTrace" value="true"/>
     <property name="java.library.path" value="/Users/thisisamank/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="UTF-8"/>
@@ -59,78 +61,14 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="69.0"/>
   </properties>
-  <testcase name="queue_circular_wrap_around" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0">
-    <error message="Not implemented" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not implemented
-	at main.java.com.wagmi.finance.processing.PendingQueue.enqueue(PendingQueue.java:17)
-	at test.java.com.wagmi.finance.processing.PendingQueueTest.queue_circular_wrap_around(PendingQueueTest.java:66)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-  </testcase>
+  <testcase name="queue_circular_wrap_around" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
   <testcase name="queue_with_zero_capacity" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
-  <testcase name="queue_multiple_wrap_arounds" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.001">
-    <error message="Not implemented" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not implemented
-	at main.java.com.wagmi.finance.processing.PendingQueue.enqueue(PendingQueue.java:17)
-	at test.java.com.wagmi.finance.processing.PendingQueueTest.queue_multiple_wrap_arounds(PendingQueueTest.java:82)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-  </testcase>
-  <testcase name="enqueue_dequeue_circular_behavior_and_overflow_underflow" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0">
-    <error message="Not implemented" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not implemented
-	at main.java.com.wagmi.finance.processing.PendingQueue.enqueue(PendingQueue.java:17)
-	at test.java.com.wagmi.finance.processing.PendingQueueTest.enqueue_dequeue_circular_behavior_and_overflow_underflow(PendingQueueTest.java:23)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-  </testcase>
-  <testcase name="queue_size_tracking" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0">
-    <error message="Not implemented" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not implemented
-	at main.java.com.wagmi.finance.processing.PendingQueue.enqueue(PendingQueue.java:17)
-	at test.java.com.wagmi.finance.processing.PendingQueueTest.queue_size_tracking(PendingQueueTest.java:98)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-  </testcase>
+  <testcase name="queue_multiple_wrap_arounds" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
+  <testcase name="enqueue_dequeue_circular_behavior_and_overflow_underflow" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
+  <testcase name="queue_size_tracking" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
   <testcase name="queue_with_null_transaction" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
-  <testcase name="queue_enqueue_dequeue_alternating" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0">
-    <error message="Not implemented" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not implemented
-	at main.java.com.wagmi.finance.processing.PendingQueue.enqueue(PendingQueue.java:17)
-	at test.java.com.wagmi.finance.processing.PendingQueueTest.queue_enqueue_dequeue_alternating(PendingQueueTest.java:138)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-  </testcase>
-  <testcase name="queue_fifo_order" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.001">
-    <error message="Not implemented" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not implemented
-	at main.java.com.wagmi.finance.processing.PendingQueue.enqueue(PendingQueue.java:17)
-	at test.java.com.wagmi.finance.processing.PendingQueueTest.queue_fifo_order(PendingQueueTest.java:53)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-  </testcase>
-  <testcase name="queue_with_capacity_one" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0">
-    <error message="Not implemented" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not implemented
-	at main.java.com.wagmi.finance.processing.PendingQueue.enqueue(PendingQueue.java:17)
-	at test.java.com.wagmi.finance.processing.PendingQueueTest.queue_with_capacity_one(PendingQueueTest.java:41)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-  </testcase>
-  <testcase name="queue_with_large_capacity" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.001">
-    <error message="Not implemented" type="java.lang.UnsupportedOperationException"><![CDATA[java.lang.UnsupportedOperationException: Not implemented
-	at main.java.com.wagmi.finance.processing.PendingQueue.enqueue(PendingQueue.java:17)
-	at test.java.com.wagmi.finance.processing.PendingQueueTest.queue_with_large_capacity(PendingQueueTest.java:124)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
-]]></error>
-  </testcase>
+  <testcase name="queue_enqueue_dequeue_alternating" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
+  <testcase name="queue_fifo_order" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
+  <testcase name="queue_with_capacity_one" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.0"/>
+  <testcase name="queue_with_large_capacity" classname="test.java.com.wagmi.finance.processing.PendingQueueTest" time="0.001"/>
 </testsuite>

@@ -1,5 +1,15 @@
 ## 🧑‍🎓 Student Guide: Personal Finance DSA Project (Make All Tests Pass)
 
+### 🚦 Start Here: Your Goal
+
+- ✅ Primary goal: Make every test in `src/test/java/**` pass.
+- ▶️ Best way to run tests with friendly output:
+  - `./scripts/test-run.sh` (one-shot summary)
+  - `./scripts/test-watch.sh` (auto re-run on changes)
+  - Filter to a class or a single method: `./scripts/test-run.sh test.java.com.wagmi.finance.alg.SortersTest#mergeSortByDate_sorts_by_date_ascending`
+
+Keep this README open and follow sections in order: Setup → Run tests → Implement → Re-run → Repeat until green.
+
 This repository contains a scaffolded Java/Maven project with unit tests already written for you. Your job is to implement the data structures and algorithms so that all tests pass.
 
 Focus: setup quickly, run tests often, implement incrementally.
@@ -62,6 +72,44 @@ mvn -Dtest=com.wagmi.finance.alg.SortersTest#shouldSortByAmountAscending test
 IntelliJ users:
 - Right-click any test class or method in `src/test/java` and select “Run”.
 
+### ⚡ Nodemon-style runners (easier output)
+
+- One-shot summary:
+```bash
+./scripts/test-run.sh            # run all tests with a clean summary
+./scripts/test-run.sh <Filter>   # e.g., test.java.com.wagmi.finance.alg.SortersTest
+./scripts/test-run.sh <Class#Method>
+```
+
+- Watch mode (auto re-run on changes):
+```bash
+brew install fswatch              # macOS only (one-time)
+./scripts/test-watch.sh           # all tests
+./scripts/test-watch.sh <Filter>  # run specific test(s) on change
+```
+
+### 🧪 Unit Testing 101 (If you're new to tests)
+
+- What is a test? A small program that calls your code and checks the result automatically.
+- What does “pass/fail” mean?
+  - Pass: your method returned what the test expected.
+  - Fail: your method returned something else, or threw an unexpected error.
+- Where do I see results?
+  - In the terminal after `mvn test`.
+  - Detailed per-class reports in `target/surefire-reports/*.txt` (open the file that matches the test class name).
+- How do I read a failure?
+  - Look for the first “AssertionFailedError” or stack trace. It shows the expected vs actual values and the file:line of the failing test.
+  - Open the mentioned test file to see what the test expects, then open the corresponding class in `src/main/java/**` and implement the logic to meet that expectation.
+- Common assertions you’ll see:
+  - `assertEquals(expected, actual)`: your code should produce `expected`.
+  - `assertTrue(condition)`, `assertFalse(condition)`: your code should make the condition true/false.
+  - `assertThrows(Exception.class, () -> call())`: your code should throw the specified exception.
+- Productive loop:
+  1) Run a specific test (e.g., one method) to see the first failure.
+  2) Implement the minimal code to satisfy that failure.
+  3) Re-run the same test until it passes.
+  4) Move to the next failing test.
+
 ### 📁 Project Map (Where to Code)
 
 - `src/main/java/com/wagmi/finance/alg/Sorters.java`: implement sorting algorithms.
@@ -88,6 +136,10 @@ Suggested order:
 4. `StringUtils` and `RecursionUtils`
 5. `BudgetManager`
 6. `FinanceApp` (light, if needed by tests)
+
+Progress check:
+- Run `./scripts/test-run.sh` after each small change.
+- All green? You’re done. If red, open the mentioned test file and implement what it expects.
 
 ### 🧱 Rules and Expectations
 

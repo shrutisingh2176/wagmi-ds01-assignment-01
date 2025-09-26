@@ -1,5 +1,13 @@
 package main.java.com.wagmi.finance.alg;
 
+/*
+ TODO[Student]: Sorting algorithms
+ - Implement Quick Sort by amount (ascending).
+ - Implement Merge Sort by date (ascending), stable.
+ - Implement Insertion Sort by category using provided comparator.
+ - See `SortersTest` for exact expectations and edge cases.
+*/
+
 import java.util.Comparator;
 
 import main.java.com.wagmi.finance.model.Transaction;

@@ -1,5 +1,13 @@
 package main.java.com.wagmi.finance.processing;
 
+/*
+ TODO[Student]: Circular queue for pending transactions
+ - Implement circular `enqueue` and `dequeue` with head/tail updates and size tracking.
+ - Enforce overflow/underflow rules as per tests.
+ - Validate null enqueues (should throw).
+ - Run `PendingQueueTest` after changes.
+*/
+
 import main.java.com.wagmi.finance.model.Transaction;
 
 public class PendingQueue {

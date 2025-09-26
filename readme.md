@@ -141,6 +141,18 @@ Progress check:
 - Run `./scripts/test-run.sh` after each small change.
 - All green? You’re done. If red, open the mentioned test file and implement what it expects.
 
+### 📋 TODO Checklist (Follow Along)
+
+- [ ] Strings: make `sanitizeDescription` and `matchesDatePattern` pass all tests
+- [ ] DS: implement `DoublyLinkedTransactions` add/delete/find/reverse/toArray + size tracking
+- [ ] Stack: implement `OperationStack` push/pop/peek with correct overflow/underflow
+- [ ] Queue: implement `PendingQueue` enqueue/dequeue with circular behavior and size
+- [ ] Sorting: implement `quickSortByAmount`, `mergeSortByDate`, `insertionSortByCategory`
+- [ ] Search: implement `binarySearchById`
+- [ ] Recursion: implement `isValidDateRecursive`, `categoryTotalRecursive`, `generateBudgetReportRecursive`
+- [ ] Budget: implement categories, limits, spending, approaching/over limit
+- [ ] Integration: run the full suite and verify everything is green
+
 ### 🧱 Rules and Expectations
 
 - Use only Java Standard Library (no external DS/Algo libs).

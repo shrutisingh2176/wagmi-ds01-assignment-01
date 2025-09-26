@@ -1,5 +1,12 @@
 package main.java.com.wagmi.finance.alg;
 
+/*
+ TODO[Student]: Binary search by Transaction ID
+ - Array must be sorted by `Transaction.getId()` ascending.
+ - Handle null array (throw NPE) and null id (return -1) per tests.
+ - See `SearchTest` for target indices and edge cases.
+*/
+
 import main.java.com.wagmi.finance.model.Transaction;
 
 public final class Search {

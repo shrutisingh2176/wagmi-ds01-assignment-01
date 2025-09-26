@@ -1,5 +1,13 @@
 package main.java.com.wagmi.finance.history;
 
+/*
+ TODO[Student]: Array-based stack
+ - Enforce underflow/overflow behaviors per tests.
+ - Note dynamic growth is allowed only when initial capacity >= 10.
+ - Validate null pushes (should throw).
+ - Run `OperationStackTest` after changes.
+*/
+
 public class OperationStack {
     private final String[] data;
     private int top = -1;

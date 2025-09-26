@@ -1,5 +1,13 @@
 package main.java.com.wagmi.finance.recursion;
 
+/*
+ TODO[Student]: Recursive utilities
+ - `isValidDateRecursive`: parse YYYY-MM-DD without regex; handle ranges + leap years.
+ - `categoryTotalRecursive`: sum amounts for a category (expenses only) recursively.
+ - `generateBudgetReportRecursive`: build a non-empty string summarizing items recursively.
+ - See `RecursionUtilsTest` for behavior and edge cases.
+*/
+
 import main.java.com.wagmi.finance.model.Transaction;
 
 public final class RecursionUtils {

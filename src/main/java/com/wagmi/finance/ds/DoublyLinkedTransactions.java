@@ -1,5 +1,12 @@
 package main.java.com.wagmi.finance.ds;
 
+/*
+ TODO[Student]: Doubly linked list of transactions
+ - Implement tail-insert `add`, `deleteById`, `findById`, `reverse`, `toArray`.
+ - Maintain `head`, `tail`, and `size` correctly across all operations.
+ - After each edit, run `DoublyLinkedTransactionsTest` (or `./scripts/test-run.sh`).
+*/
+
 import main.java.com.wagmi.finance.model.Transaction;
 
 public class DoublyLinkedTransactions {

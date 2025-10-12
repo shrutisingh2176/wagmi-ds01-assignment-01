@@ -15,6 +15,26 @@ public final class Search {
 
     public static int binarySearchById(Transaction[] sortedById, String id) {
         // stub for binary search
-        throw new UnsupportedOperationException("Not implemented");
-    }
-}
+        if (sortedById == null) {
+            throw new NullPointerException("Array is null");
+        }
+        if (id == null) {
+            return -1;
+        }
+        int start = 0;
+        int end = sortedById.length - 1;
+         while (start <= end) {
+            int mid = start + (end - start) / 2;
+
+            String midId = sortedById[mid].getId();
+            if (midId.equals(id)) {
+                return mid;
+            } else if (midId.compareTo(id) < 0) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+
+        }
+        return -1;
+    }}

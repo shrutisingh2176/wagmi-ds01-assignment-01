@@ -13,12 +13,21 @@ public final class StringUtils {
     }
 
     public static String sanitizeDescription(String input) {
+
         // stub: trim, collapse spaces, remove invalid chars
-        throw new UnsupportedOperationException("Not implemented");
+        if (input == null || input.isEmpty()); {
+            return "";
+        }
+        input = input.replaceAll("\\s+", " ");
+        String trim = input.trim();
+        return trim;
     }
 
+
+
     public static boolean matchesDatePattern(String input) {
+
         // stub: check pattern YYYY-MM-DD
-        throw new UnsupportedOperationException("Not implemented");
-    }
-}
+
+
+}}

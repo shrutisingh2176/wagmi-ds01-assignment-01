@@ -22,12 +22,28 @@ public class PendingQueue {
 
     public void enqueue(Transaction tx) {
         // stub
-        throw new UnsupportedOperationException("Not implemented");
+        if (tx == null) {
+            throw new  UnsupportedOperationException("Transaction cannot be null");
+        }
+
+        if (isFull()) {
+             throw new UnsupportedOperationException("Queue overflow");
+        }
+        data[tail] = tx;
+        tail = (tail + 1) % data.length;
+        size++;
     }
 
     public Transaction dequeue() {
         // stub
-        throw new UnsupportedOperationException("Not implemented");
+       if(isEmpty()){ throw new UnsupportedOperationException("Queue Underflow");}
+
+        Transaction removed = data[head];
+        data[head] = null;
+        head = (head + 1) % data.length;
+        size--;
+
+        return removed;
     }
 
     public boolean isEmpty() {
